@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 리스트</h1>
+<a href="/updateForm">업데이트</a>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>이름</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="list : ${list}">
+        <td th:text="${list.id}"></td>
+        <td th:text="${list.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
